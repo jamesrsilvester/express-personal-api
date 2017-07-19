@@ -16,6 +16,25 @@ app.use(function(req, res, next) {
 });
 
 /************
+ * hardcoded *
+ ************/
+
+// NOTE: Project
+
+let profileInfo =
+{
+ name: "James Silvester",
+ githubLink: "https://github.com/jamesrsilvester",
+ githubProfileImage: "https://avatars1.githubusercontent.com/u/6411628?v=4&s=460",
+ personalSiteLink "https://jamesrsilvester.github.io/"
+ currentCity: "SF",
+ familyMembers: [
+   { name: 'Arya Stark', relationship: 'sister' },
+   { name: 'Bran Stark', relationship: 'brother' }
+ ]
+};
+
+/************
  * DATABASE *
  ************/
 
@@ -47,10 +66,10 @@ app.get('/api', function apiIndex(req, res) {
   // It would be seriously overkill to save any of this to your database.
   // But you should change almost every line of this response.
   res.json({
-    woopsIForgotToDocumentAllMyEndpoints: true, // CHANGE ME ;)
+    woopsIForgotToDocumentAllMyEndpoints: true, // CHANGED ;)
     message: "Welcome to my personal api! Here's what you need to know!",
-    documentationUrl: "https://github.com/example-username/express-personal-api/README.md", // CHANGE ME
-    baseUrl: "http://YOUR-APP-NAME.herokuapp.com", // CHANGE ME
+    documentationUrl: "https://github.com/jamesrsilvester/express-personal-api/blob/master/README.md", // CHANGED
+    baseUrl: "https://peaceful-taiga-87399.herokuapp.com/", // CHANGED
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
